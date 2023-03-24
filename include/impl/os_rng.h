@@ -5,6 +5,12 @@
 
 namespace rng::impl {
 
+/**
+ * @brief The <tt>OsRng</tt> class is a random number generator that uses the operating system's random number generator.
+ * @details The implementation of this class is dependent on the operating system. It retrieves the random source from
+ *          the hardware using the interfaces provided by the operating systems, and then uses MT19937-64 to generate
+ *          the random data.
+ */
 class OsRng : public core::RngCore {
 public:
     uint32_t get_uint32() override;
